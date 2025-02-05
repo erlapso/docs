@@ -1,0 +1,2 @@
+from: typescript-20-jest-pnpm
+setup_commands: ['@merge', 'echo \'module.exports={\n  testEnvironment:"jsdom",\n  setupFilesAfterEnv:["@testing-library/jest-dom"],\n  moduleNameMapper:{\n    "^@/(.*)$":"<rootDir>/src/$1",\n    "\\\\.mdx?$":"<rootDir>/src/__mocks__/mdxMock.js"\n  }\n}\' > jest.config.js']
